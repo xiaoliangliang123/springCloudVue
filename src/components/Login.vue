@@ -27,7 +27,7 @@
           })
           .then(successResponse => {
             this.responseResult = JSON.stringify(successResponse.data)
-            alert('登录成功');
+            alert(this.responseResult);
           })
           .catch(failResponse => {})
       }
