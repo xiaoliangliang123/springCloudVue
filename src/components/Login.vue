@@ -26,8 +26,12 @@
             password: this.loginInfoVo.password
           })
           .then(successResponse => {
-            this.responseResult = JSON.stringify(successResponse.data)
-            alert(this.responseResult);
+            this.responseResult = JSON.stringify(successResponse.data);
+            if(this.responseResult.success){
+              alert(this.responseResult);
+            }else {
+              alert(this.responseResult);
+            }
           })
           .catch(failResponse => {})
       }
