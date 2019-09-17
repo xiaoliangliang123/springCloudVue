@@ -26,11 +26,13 @@
             password: this.loginInfoVo.password
           })
           .then(successResponse => {
-            this.responseResult = JSON.stringify(successResponse.data);
-            if(this.responseResult.success){
-              alert(this.responseResult);
+             debugger
+            if(successResponse.data.success){
+
+              localStorage.signature = successResponse.data.signature;
+              this.$router.push('/welcome')
             }else {
-              alert(this.responseResult);
+              alert(successResponse.data.message);
             }
           })
           .catch(failResponse => {})
