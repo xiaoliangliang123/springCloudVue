@@ -28,8 +28,7 @@
           .then(successResponse => {
              debugger
             if(successResponse.data.success){
-
-              localStorage.signature = successResponse.data.signature;
+              localStorage.setItem('token',successResponse.data.data.signature)
               this.$router.push('/welcome')
             }else {
               alert(successResponse.data.message);

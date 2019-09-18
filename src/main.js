@@ -13,6 +13,21 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 
+
+axios.interceptors.request.use(
+
+  config => {
+
+    let token =localStorage.getItem('token')
+    if (token) {
+      config.headers.common['token'] =localStorage.getItem('token');
+    }
+    return config
+  },
+  err => {
+    return Promise.reject(err);
+  }
+)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
