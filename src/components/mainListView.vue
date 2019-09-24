@@ -1,11 +1,15 @@
 <template>
-  <ul>
+  <div>
+    <userInfo></userInfo>
+    <ul>
 
-    <li v-for="(item,index) in list">
-      {{item.id}} {{item.data}}
-    </li>
+      <li v-for="(item,index) in list">
+        {{item.id}} {{item.data}}
+      </li>
 
-  </ul>
+    </ul>
+  </div>
+
 </template>
 
 <script>
