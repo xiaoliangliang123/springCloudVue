@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Main from '@/components/Main'
 import Login from '@/components/Login'
 import mainListView from '@/components/mainListView'
+import serviceAListView from '@/components/serviceAListView'
+import serviceBListView from '@/components/serviceBListView'
+
 import userInfo from '@/components/userInfo'
 import welcomeView from '@/components/welcome'
 
@@ -19,6 +22,16 @@ export default new Router({
       path: '/mainListView',
       name: 'mainListView',
       component: mainListView
+    },
+    {
+      path: '/serviceAListView',
+      name: 'serviceAListView',
+      component: serviceAListView
+    },
+    {
+      path: '/serviceBListView',
+      name: 'serviceBListView',
+      component: serviceBListView
     },
     {
       path: '/Login',
