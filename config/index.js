@@ -12,12 +12,25 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/zuul_client': {
-        target: 'http://192.168.2.163:9005/eureka-client',
+        target: 'http://192.168.2.163:9005/client',
         changeOrigin: true,
         pathRewrite: {
           '^/zuul_client': '/'
         }
-
+      },
+      '/zuul_servicea': {
+        target: 'http://192.168.2.163:9005/servicea',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/zuul_servicea': '/'
+        }
+      },
+      '/zuul_serviceb': {
+        target: 'http://192.168.2.163:9005/serviceb',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/zuul_serviceb': '/'
+        }
       }
     },
 

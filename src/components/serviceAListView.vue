@@ -24,7 +24,7 @@
       loadData() {
 
         this.$axios
-          .post('/zuul_client/main/mainList',null)
+          .post('/zuul_servicea/main/mainList',null)
           .then(successResponse => {
             if(successResponse.data.success){
               this.list = successResponse.data.data;
